@@ -11,9 +11,35 @@ h1 {font-family:EB Garamond;
     font-size:64px;
     font-weight:700;
     font-style:bold;
-    color:#8a4049;}
+    color:#8a4049;
+    text-align:center;}
 
-/*dodaj body stil po potrebi*/
+h2 {font-family:EB Garamond;
+    font-size:32px;
+    font-weight:600;
+    font-style:bold;
+    color:#8a4049;
+    text-align:center;} 
+
+.horizontal {text-align: center;} 
+.horizontal li {list-style-type:none;
+    float:none;
+    display: inline;
+    padding: 7px;
+    font-family:Manrope;
+    font-size:14px;}
+
+h3 {font-family:EB Garamond;
+    font-size:24px;
+    font-weight:600;
+    font-style:bold;
+    clear: both;}
+
+em {font-style: italic;
+    color:#8a4049;
+    font-weight: 600;}
+
+    /*dodaj body stil po potrebi*/
 
 p {font-family:Manrope; 
    font-size:16px;
@@ -31,3 +57,41 @@ body {
     margin: 0 auto;
     padding: 60px 40px;
 }
+
+ul {font-family:Manrope;
+    font-size:16px;
+    font-weight:400;
+    font-style:normal;
+    list-style-type: circle;
+    }
+
+.side-note {
+    float:right;
+    width: 500px;
+    padding: 10px;
+    background-color: #8a4049;
+    margin: 40px 0px 40px 0px;
+    border-radius: 8px;
+    font-style: italic;
+    font-size: 20px;
+}
+.side-note p {
+    background-color:#8a4049;
+    color:#f5f1e9
+}
+
+
+ol {font-family:Manrope;
+    font-size:16px;
+    font-weight:400;
+    font-style:normal;
+    list-style-type: decimal;
+    line-height: 2;
+    }
+
+span {color:rgb(225, 92, 43);
+      font-style: italic;
+    }
+
+
+
