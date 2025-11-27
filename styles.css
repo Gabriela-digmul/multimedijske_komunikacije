@@ -5,34 +5,41 @@
 
 
 
-
-
-h1 {font-family:EB Garamond;
-    font-size:64px;
-    font-weight:700;
-    font-style:bold;
+h1, h2, h3, caption, legend {
+    font-family:EB Garamond;
     color:#8a4049;
-    text-align:center;}
+    font-style:bold;
+}
+h1, h2, caption, legend {
+    text-align: center;
+    vertical-align: middle;
+}
 
-h2 {font-family:EB Garamond;
-    font-size:32px;
+p, ul, ol, label, input, select, button, table {
+    font-family:Manrope;
+}
+
+h1 {font-size:64px;
+    position:relative;
+    top:10px;}
+
+h2 {font-size:32px;
     font-weight:600;
-    font-style:bold;
-    color:#8a4049;
-    text-align:center;} 
+    position:relative;
+    top:10px;
+    left: 0;} 
 
 .horizontal {text-align: center;} 
-.horizontal li {list-style-type:none;
+.horizontal > li {
+    list-style-type:none;
     float:none;
     display: inline;
     padding: 7px;
     font-family:Manrope;
     font-size:14px;}
 
-h3 {font-family:EB Garamond;
-    font-size:24px;
+h3 {font-size:24px;
     font-weight:600;
-    font-style:bold;
     clear: both;}
 
 em {font-style: italic;
@@ -41,8 +48,7 @@ em {font-style: italic;
 
     /*dodaj body stil po potrebi*/
 
-p {font-family:Manrope; 
-   font-size:16px;
+p {font-size:16px;
    font-weight:400;
    font-style:normal;
    color:#333333;
@@ -50,19 +56,19 @@ p {font-family:Manrope;
    }
 
 body {
-    margin: 20px;
-    padding: 20px;
+    margin: 0 auto;
     background-color: #f5f1e9;
     max-width: 900px;
-    margin: 0 auto;
     padding: 60px 40px;
 }
 
-ul {font-family:Manrope;
+ul, ol {
     font-size:16px;
     font-weight:400;
-    font-style:normal;
-    list-style-type: circle;
+    line-height: 2;
+    }
+
+ul {list-style-type: circle;
     }
 
 .side-note {
@@ -74,19 +80,17 @@ ul {font-family:Manrope;
     border-radius: 8px;
     font-style: italic;
     font-size: 20px;
+    position:relative;
+    right: -20px;
 }
 .side-note p {
     background-color:#8a4049;
-    color:#f5f1e9
+    color:#f5f1e9;
+    bottom: 20px;
 }
 
 
-ol {font-family:Manrope;
-    font-size:16px;
-    font-weight:400;
-    font-style:normal;
-    list-style-type: decimal;
-    line-height: 2;
+ol {list-style-type: decimal;
     }
 
 span {color:rgb(225, 92, 43);
@@ -99,11 +103,11 @@ fieldset {
     padding: 20px;
     background-color:rgb(225, 92, 43, 0.1);
     clear:both;
-    line-height:3;
+    line-height: 3;
+    margin-top: 40px;
 }
 
 legend {
-    font-family: EB Garamond;
     font-size: 24px;
     font-weight: 600;
     color: #000000;
@@ -124,13 +128,11 @@ input[list] {
 }
 
 label {
-    font-family: Manrope;
     font-size: 16px;
     font-weight: 500;
 }
 
 input {
-    font-family: Manrope;
     font-size: 16px;
     padding: 4px;
     }
@@ -141,13 +143,11 @@ select {
   color: #8a4049;
   border-radius: 6px; 
   padding: 10px;
-  font-family: Manrope;
   font-size: 14px;
   cursor: pointer;
 }
 
 button {
-    font-family: Manrope;
     padding: 6px 12px;
     background-color: #8a4049;
     color: #f5f1e9;
@@ -160,14 +160,11 @@ table {
     height: auto;
     margin: 40px 0px;
     border-collapse: collapse;
-    font-family: Manrope;
     background-color: #f5f1e9;
 }
 
 caption {
-    font-family: EB Garamond;
     font-size: 28px;
-    font-weight: 600;
     color: #8a4049;
     margin: 10px;
 }
@@ -180,18 +177,17 @@ thead th {
     color: #f5f1e9;
     font-weight: 600;
     padding:20px;
-    text-align: center;
-
 }
 
 #vrijeme {
     text-align: center;
+    vertical-align: middle;
     background:rgb(225, 92, 43, 0.2);
     color: #333333;
     font-weight: 600;
 }
 
-tr:nth-child(even) {
+table tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
@@ -200,6 +196,7 @@ th, td {
     border: 1px solid #8a4049;
     padding: 12px;
     text-align: center;
+    vertical-align: middle;
 }
 
 .komentar {
@@ -213,6 +210,7 @@ th, td {
     border: 3px solid #8a4049;
     border-radius: 100px 0px 100px 100px;
     border-collapse: separate;
+    margin: 20px 0;
 }
 
 .komentar td {
