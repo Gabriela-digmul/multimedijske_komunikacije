@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moj portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gabriela's space</h1>
+    <h2>moje dvadesete: u izradi</h2>
+    <p>Dobrodošli u moj kaotičan, amiciozan i posve moj prostor. Ovdje se <strong>ambicija</strong> sudara s realnošću,
+        gradim sve samo ne <strong>prosječan</strong> život.
+    </p>
+    <p><em>"Stockholm changed everything."</em></p>
+    <p>Posjet mom bratu u Stockholm mi je otvorio oči i pokazao posve drugačiji život.
+        Pružio mi je priliku ući u startup život, započeti gradnju karijere i biti dio tima koji radi velike stvari.
+        Pokazao mi je što je moguće kada se okružiš ljudima koji žele više.
+    </p>
+    
+    <ul class="horizontal">
+        <li>Her</li>
+        <li>Stockholm</li>
+        <li>20e</li>
+        <li>dizajn</li>
+        <li>grf</li>
+    </ul>
+
+    <h3>Što trenutno gradim</h3>
+    <ul>
+        <li>"Her" startup</li>
+        <li>fakultet</li>
+        <li>prijateljstva i konekcije</li>
+        <li>bolju verziju sebe svakog dana</li>
+    </ul>
+        <div class="side-note">
+            <p>
+                "Da bih imala velik život, moram proći kroz velike stvari i poduzeti hrabre poteze, ne zadovoljiti se s prosječnim životom."
+            </p>
+        </div>
+
+    <h3>Principi i uvjerenja</h3>
+    <p>Ovo nisu pravila, već <span>podsjetnici i mišljenja.</span> Ona služe kao <span>vodilja kroz život,</span>
+        za lakše <span>ostvarivanje ciljeva</span> i kao podsjetnik zašto radimo velike stvari.
+    </p>
+   
+    <ol>
+        <li>velik život zahtijeva velike stvari.</li>
+            <ul>
+                <li>komfor se protivi rastu</li>
+                <li>ambicija<sup>∞</sup></li>
+            </ul>
+        <li>nastavi se kretati bez obzira na sve</li>
+            <ul>
+                <li>konstantan rad donosi uspjeh</li>
+                <li>nemoj narušiti napredak zbog okolnih uvjeta koji naiđu</li>
+            </ul>
+        <li>investicija u znanje</li>
+        <li>okruži se ljudima koji žele više</li>
+            <ul>
+                <li>s kakvim si ljudima, u takvoj energiji se nalaziš</li>
+                <li>biraj ljude s koji bude motivaciju i želju za napretkom</li>
+            </ul>
+        <li>procesuriaj sve emocije (interno i potpuno), ali ostani staložen i stabilan</li>
+            <ul>
+                <li>ne budi paraliziran emocijama</li>
+                <li>osjećaj i procesuiraj sve, ali nastavi sa svime što radiš kao da je sve u redu (zato što i je)</li>
+            </ul>
+    </ol>
+
+    <div class="side-note">
+        <p>always aim <sup>high</sup> stay grounded <sub>when needed</sub></p>
+    </div>
+
+    <form action="">
+        <fieldset>
+            <legend>Javi se kad stigneš</legend>
+            <label for="ime">Ime:</label>
+             <input type="text" id="ime" name="ime" size="40" /><br />
+            <label for="email">Email:</label>
+             <input type="email" id="email" name="email" size="40" placeholder="ime@gmail.com"/><br />
+            <label for="razlog">Razlog javljanja:</label>
+            <input list="razlog" name="razlog">
+            <datalist id="razlog">
+                <option value="suradnja">
+                <option value="pitanje">
+                <option value="upoznavanje">
+                <option value="razgovor">
+                <option value="častim kavom">
+            </datalist>
+            <br>
+            <label>Poruka:</label>
+            <input type="text" id="poruka" name="poruka">
+            <br>
+            <label for="raspoloženje">Kako se trenutno osjećaš:</label>
+            <select id="raspolozenje" name="tvoje rapoloženje">
+                <option name="raspoloženje" value="sretno">sretno</option>
+                <option name="raspoloženje" value="tužno">tužno</option>
+                <option name="raspoloženje" value="uzbuđeno">uzbuđeno</option>
+                <option name="raspoloženje" value="umorno">umorno</option>
+            </select>
+            <br>
+            <button type="submit" value="Pošalji" onclick="alert('Javim se kad stignem ;)')"> Pošalji</button>
+            <button type="reset" value="Poništi"> Poništi</button>
+        </fieldset>
+        
+<table>
+    <caption>moj idealan dan vs stvarnost</caption>
+    <thead>
+        <tr>
+            <th>vrijeme</th>
+            <th>plan</th>
+            <th>stvarnost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>jutro</td>
+            <td>rano buđenje</td>
+            <td>odgađanje alarma</td>
+        </tr>
+        <tr>
+            <td>prijepodne</td>
+            <td>startup rad</td>
+            <td>scrollanje pinteresta</td>
+        </tr>
+        <tr>
+            <td>ručak</td>
+            <td>zdrav obrok</td>
+            <td>zaboravila jesti do 18h</td>
+        </tr>
+        <tr>
+            <td rowspan="3" id="vrijeme">popodne</td>
+            <td>faks</td>
+            <td>faks, ali zaboravila stvari</td>
+        </tr>
+        <td colspan="2">kava s ekipom</td>
+            </tr>
+        <tr>
+            <td>zadaci</td>
+            <td>"a do kad je rok?"</td>
+        </tr>
+        <tr>
+            <td>večer</td>
+            <td>ići rano spavati</td>
+            <td>ne mogu zaspati do 3</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="komentar">
+    <tr>
+        <td>nekad ne ide sve po planu, ali kava je obavezan dio dana :)</td>
+    </tr>
+</table>
+
+    <h2>kroz moju kameru <3 </h2>
+    <p class="centered">Sth - Zg</p>
+    <div class="photo-gallery">
+        <img src="slikice/ramen.jpeg">
+        <img src="slikice/her.jpeg">
+        <img src="slikice/likovnapraksa.jpeg">
+        <img src="slikice/redbull.jpeg">
+    </div>
+
+    <picture>
+    <source media="(min-width: 1024px)" srcset="slikice/snoopy.jpg">
+    <source media="(min-width: 768px)" srcset="slikice/snoopy.jpg">
+    <img src="slikice/snoopy.jpg">
+</picture>
+     
+        <p>pogledaj moj projektni rad s predmeta Digitalni multimedij</p>
+        <iframe src="https://gabriela-digmul.github.io/Gabriela_Susec_DM_projektni/index.html"></iframe>
+
+
+        <a href="https://open.spotify.com/artist/4oLeXFyACqeem2VImYeBFe?si=JoQrWeYhQdSf5yYcXVgV8A">posjeti i mojeg najslušanijeg artista ovaj tjedan</a>
+
+        <object data="slikice/meme.jpg" height="450"></object>
+
+
+</body>
+</html>
