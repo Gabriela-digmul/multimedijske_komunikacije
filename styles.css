@@ -36,7 +36,20 @@ h2 {font-size:32px;
     display: inline;
     padding: 7px;
     font-family:Manrope;
-    font-size:14px;}
+    font-size:14px;
+    transition: all 0.5s ease;}
+
+.horizontal > li:hover {
+    border-radius: 10px;
+    background-color: rgba(138, 64, 73, 0.85);
+    color: #f5f1e9;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(138, 64, 73, 0.3);
+}
+
+.horizontal > li:active {
+    transform: translateY(-1px) scale(1.05);
+}
 
 h3 {font-size:24px;
     font-weight:600;
@@ -82,6 +95,7 @@ ul {list-style-type: circle;
     font-size: 20px;
     position:relative;
     right: -20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 .side-note p {
     background-color:#8a4049;
@@ -89,6 +103,10 @@ ul {list-style-type: circle;
     bottom: 20px;
 }
 
+.side-note:hover {
+    transform: translateX(10px) scale(1.02);
+    box-shadow: -10px 10px 30px rgba(138, 64, 73, 0.3);
+}
 
 ol {list-style-type: decimal;
     }
@@ -125,7 +143,9 @@ input[list] {
     background: white;
     color: #333;
     margin-left: 10px;
+    transition: all 0.3s ease;
 }
+
 
 label {
     font-size: 16px;
@@ -137,6 +157,25 @@ input {
     padding: 4px;
     }
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[list]:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #8a4049;
+    box-shadow: 0 0 10px rgba(225, 92, 43, 0.3);
+    transform: scale(1.02);
+    background-color: #fff9f5;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[list]:hover,
+select:hover {
+    border-color: #a04d57;
+    box-shadow: 0 2px 8px rgba(138, 64, 73, 0.15);
+}
+
 
 select {
   background-color: #f5f1e9;
@@ -145,6 +184,7 @@ select {
   padding: 10px;
   font-size: 14px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 button {
@@ -153,6 +193,26 @@ button {
     color: #f5f1e9;
     border-radius: 8px;
     font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(138, 64, 73, 0.4);
+    background-color: #a04d57;
+}
+
+button:active {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 4px 10px rgba(138, 64, 73, 0.3);
+}
+
+button:focus {
+    outline: 3px solid #e15c2b;
+    outline-offset: 3px;
 }
 
 table {
@@ -210,13 +270,25 @@ th, td {
     border: 3px solid #8a4049;
     border-radius: 100px 0px 100px 100px;
     border-collapse: separate;
-    margin: 20px 0;
+    position: relative;
+    left: 0;
+    transition: left 5s ease;
 }
 
 .komentar td {
     padding: 20px;
     border: none;
     text-align: center;
+}
+
+.komentar-div {
+    width: 100%;
+    position: relative;
+    margin: 20px 0;
+}
+
+.komentar-div:hover .komentar{
+    left: 80%
 }
 
 .centered {
@@ -255,11 +327,30 @@ a{ font-family: EB Garamond;
     text-align: center;
     display:block;
     margin: 40px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.2s ease;
     }
 a:link {color:#8a4049}
 a:visited {color:#333333}
-a:hover {color:#e15c2b}
-a:active {color:#8a4049}
+a:hover {color:#e15c2b;
+    transform: translateY(-2px);}
+a:active {color:#8a4049;
+    transform: translateY(0);}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e15c2b;
+    transition: width 0.4s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
 
 object {
     display: block;
@@ -277,6 +368,17 @@ object {
     .photo-gallery img {
         width: 100%;
         margin: 0;
+        transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.3s ease;
+    }
+    .photo-gallery img:hover {
+    transform: scale(1.08) rotate(2deg);
+    box-shadow: 0 15px 40px rgba(138, 64, 73, 0.3);
+    filter: brightness(1.1);
+    }
+
+    .photo-gallery img:focus {
+        outline: 3px solid #8a4049;
+        outline-offset: 5px;
     }
 
    iframe {
@@ -306,7 +408,20 @@ video, audio {
     display: block;
     margin: 20px auto;
     max-width: 100%;
+    transition: all 0.3s ease;
+    border-radius: 8px;
 }
+
+video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(138, 64, 73, 0.3);
+}
+
+audio:hover {
+    box-shadow: 0 5px 20px rgba(138, 64, 73, 0.2);
+}
+
+
 
 
 
