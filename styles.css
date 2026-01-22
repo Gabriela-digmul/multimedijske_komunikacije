@@ -59,8 +59,6 @@ em {font-style: italic;
     color:#8a4049;
     font-weight: 600;}
 
-    /*dodaj body stil po potrebi*/
-
 p {font-size:16px;
    font-weight:400;
    font-style:normal;
@@ -114,6 +112,128 @@ ol {list-style-type: decimal;
 span {color:rgb(225, 92, 43);
       font-style: italic;
     }
+
+.card-container {
+    perspective: 1200px;
+    width: 600px;
+    height: 400px;
+    margin: 60px auto;
+}
+
+.card-flip {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    transform-origin: center center;
+    cursor: pointer;
+}
+
+.card-container:hover .card-flip {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(138, 64, 73, 0.3);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front {
+    background: linear-gradient(135deg, #8a4049 0%, #a04d57 100%);
+    color: #f5f1e9;
+}
+
+.card-back {
+    background: #f5f1e9;
+    color: #333;
+    transform: rotateY(180deg);
+}
+
+.card-front h2 {
+    color: #f5f1e9;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.card-front .subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.card-back p {
+    font-family: Manrope;
+    font-size: 16px;
+    margin: 12px 0;
+    text-align: left;
+    line-height: 1.8;
+    background: transparent;
+    color: #333333;
+}
+
+.card-back p strong {
+    color: #8a4049;
+    font-weight: 600;
+}
+
+.cube-scene {
+    width: 240px;
+    height: 240px;
+    perspective: 1000px;
+    margin: 100px auto;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spinCube 16s infinite linear;
+}
+
+.cube-face {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Manrope;
+    font-size: 16px;
+    background: linear-gradient(135deg, #8a4049 0%, #a04d57 100%);
+    color: #f5f1e9;
+    backface-visibility: hidden;
+}
+
+.front  { transform: rotateY(0deg)   translateZ(120px); }
+.back   { transform: rotateY(180deg) translateZ(120px); }
+.right  { transform: rotateY(90deg)  translateZ(120px); }
+.left   { transform: rotateY(-90deg) translateZ(120px); }
+.top    { transform: rotateX(90deg)  translateZ(120px); }
+.bottom { transform: rotateX(-90deg) translateZ(120px); }
+
+@keyframes spinCube {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
 
 fieldset {
     border: 2px solid #8a4049;
